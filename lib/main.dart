@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
+import 'package:async/async.dart';
 
 void main() {
   runApp(const MyApp());
@@ -62,6 +63,13 @@ class _FuturePageState extends State<FuturePage> {
             child: Text('GO!'),
             onPressed: () {
               count();
+              getNumber().then((value) {
+                setState(() {
+                  result = value.toString();
+                });
+              }).catchError((e) {
+                result = 'An error occurred';
+              });
             },
           ),
 
@@ -113,5 +121,23 @@ class _FuturePageState extends State<FuturePage> {
     setState(() {
       result = total.toString();
     });
+  }
+
+  late Completer completer;
+
+  Future getNumber() {
+    completer = Completer<int>();
+    calculate();
+    return completer.future;
+  }
+
+  Future calculate() async {
+    try {
+      await Future.delayed(const Duration(seconds: 5));
+      completer.complete(42); 
+      // throw Exception();
+    } catch (_) {
+      completer.completeError({});
+    }
   }
 }

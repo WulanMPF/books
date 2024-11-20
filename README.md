@@ -89,3 +89,50 @@ Akhirnya, run atau tekan F5 jika aplikasi belum running. Maka Anda akan melihat 
 * Langkah 1: Menambahkan tiga fungsi asinkron yang mensimulasikan penundaan dan mengembalikan nilai.
 * Langkah 2: Menambahkan tombol yang memanggil fungsi count() ketika ditekan, akan berinteraksi dengan fungsi-fungsi asinkron tersebut. Kode ini bertujuan untuk menguji dan mendemonstrasikan cara kerja operasi asinkron dalam aplikasi.
 
+## PRAKTIKUM 3
+
+### Langkah 1: Buka main.dart
+Pastikan telah impor package async berikut.
+
+![Praktikum](/images/p3_langkah1.png)
+
+### Langkah 2: Tambahkan variabel dan method
+Tambahkan variabel late dan method di class _FuturePageState seperti ini.
+
+![Praktikum](/images/p3_langkah2.png)
+
+### Langkah 3: Ganti isi kode onPressed()
+Tambahkan kode berikut pada fungsi onPressed(). Kode sebelumnya bisa Anda comment.
+
+![Praktikum](/images/p3_langkah3.png)
+
+### Langkah 4:
+Terakhir, run atau tekan F5 untuk melihat hasilnya jika memang belum running. Bisa juga lakukan hot restart jika aplikasi sudah running. Maka hasilnya akan seperti gambar berikut ini. Setelah 5 detik, maka angka 42 akan tampil.
+
+![Praktikum](/images/p3_langkah4.gif)
+
+**Soal 5** Jelaskan maksud kode langkah 2 tersebut!
+
+* Tujuan Kode: Kode ini mengatur cara untuk mendapatkan nilai asinkron (42 setelah 5 detik).
+* Completer digunakan untuk mengelola dan menyelesaikan Future secara manual, memberikan lebih banyak kontrol atas kapan dan bagaimana nilai dihasilkan.
+* Dengan menggunakan getNumber(), pemanggil dapat mendapatkan hasil dari proses yang memerlukan waktu, yaitu menunggu selama 5 detik sebelum mendapatkan nilai 42.
+
+### Langkah 5: Ganti method calculate()
+Gantilah isi code method calculate() seperti kode berikut, atau Anda dapat membuat calculate2()
+
+![Praktikum](/images/p3_langkah5.png)
+
+### Langkah 6: Pindah ke onPressed()
+Ganti menjadi kode seperti berikut.
+
+![Praktikum](/images/p3_langkah6a.png)
+
+Hasil praktikum:
+
+![Praktikum](/images/p3_langkah6b.gif)
+
+**Soal 6** Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
+
+* **Penanganan Kesalahan:** Langkah 2: Tidak ada penanganan kesalahan. Jika terjadi masalah (misalnya, kesalahan jaringan), pengguna tidak akan mendapatkan umpan balik. Langkah 5: Menambahkan penanganan kesalahan, yang memungkinkan aplikasi untuk memberikan umpan balik kepada pengguna jika terjadi kesalahan. Kode ini membuat aplikasi lebih robust dan user-friendly.
+* **Struktur Pemanggilan:** Langkah 2: Tidak ada cara untuk menangkap hasil atau kesalahan dari getNumber(). Langkah 6: Dengan memindahkan logika pemanggilan ke dalam onPressed(), hasil dan kesalahan dari operasi asinkron dapat ditangani dengan lebih baik. Kode ini memberikan pengalaman pengguna yang lebih baik dan lebih responsif.
+* **Pengalaman Pengguna:** Langkah 2: Pengguna bisa mengalami kebingungan jika terjadi kesalahan, karena tidak ada umpan balik. Langkah 5 dan 6: Meningkatkan pengalaman pengguna dengan memberikan umpan balik yang sesuai dan menangani kesalahan dengan baik, sehingga pengguna tahu jika sesuatu tidak berjalan sesuai rencana.
