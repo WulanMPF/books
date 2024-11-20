@@ -136,3 +136,34 @@ Hasil praktikum:
 * **Penanganan Kesalahan:** Langkah 2: Tidak ada penanganan kesalahan. Jika terjadi masalah (misalnya, kesalahan jaringan), pengguna tidak akan mendapatkan umpan balik. Langkah 5: Menambahkan penanganan kesalahan, yang memungkinkan aplikasi untuk memberikan umpan balik kepada pengguna jika terjadi kesalahan. Kode ini membuat aplikasi lebih robust dan user-friendly.
 * **Struktur Pemanggilan:** Langkah 2: Tidak ada cara untuk menangkap hasil atau kesalahan dari getNumber(). Langkah 6: Dengan memindahkan logika pemanggilan ke dalam onPressed(), hasil dan kesalahan dari operasi asinkron dapat ditangani dengan lebih baik. Kode ini memberikan pengalaman pengguna yang lebih baik dan lebih responsif.
 * **Pengalaman Pengguna:** Langkah 2: Pengguna bisa mengalami kebingungan jika terjadi kesalahan, karena tidak ada umpan balik. Langkah 5 dan 6: Meningkatkan pengalaman pengguna dengan memberikan umpan balik yang sesuai dan menangani kesalahan dengan baik, sehingga pengguna tahu jika sesuatu tidak berjalan sesuai rencana.
+
+## PRAKTIKUM 4
+
+### Langkah 1: Buka file main.dart
+Tambahkan method ini ke dalam class _FuturePageState
+
+![Praktikum](/images/p4_langkah1.png)
+
+### Langkah 2: Edit onPressed()
+Anda bisa hapus atau comment kode sebelumnya, kemudian panggil method dari langkah 1 tersebut.
+
+![Praktikum](/images/p4_langkah2.png)
+
+### Langkah 3: Run
+Anda akan melihat hasilnya dalam 3 detik berupa angka 6 lebih cepat dibandingkan praktikum sebelumnya menunggu sampai 9 detik.
+
+**Soal 7** Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 7".
+
+![Praktikum](/images/p4_langkah3.gif)
+
+### Langkah 4: Ganti variabel futureGroup
+Anda dapat menggunakan FutureGroup dengan Future.wait seperti kode berikut.
+
+![Praktikum](/images/p4_langkah4.png)
+
+**Soal 8** Jelaskan maksud perbedaan kode langkah 1 dan 4!
+
+* **Metode Pengelolaan Futures:** Langkah 1: Menggunakan FutureGroup, yang merupakan cara yang lebih eksplisit untuk mengelola beberapa Future. Namun, ini memerlukan lebih banyak kode dan langkah tambahan (seperti close()). Langkah 4: Menggunakan Future.wait, yang lebih sederhana dan langsung. Kode ini membuat kode lebih ringkas dan lebih mudah dibaca.
+* **Keterbacaan dan Kesederhanaan:** Langkah 1: Lebih kompleks dan mungkin membuat pembaca bingung dengan penggunaan FutureGroup. Langkah 4: Lebih jelas dan ringkas, menggunakan syntax yang lebih umum dan dikenal oleh banyak pengembang Dart.
+* **Fleksibilitas:** Langkah 1: FutureGroup mungkin berguna jika ingin menambahkan Future secara dinamis atau memerlukan kontrol lebih besar atas pengelolaan Future. Langkah 4: Future.wait lebih cocok untuk situasi di mana sudah tahu semua Future yang akan dikelola, dan lebih mudah digunakan dalam banyak kasus.
+
