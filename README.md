@@ -61,3 +61,31 @@ Lakukan run aplikasi Flutter Anda. Anda akan melihat tampilan akhir seperti gamb
 
 * substring digunakan untuk membatasi jumlah karakter yang ditampilkan dari hasil data yang didapat, sehingga antarmuka tetap bersih dan mudah dibaca.
 * catchError menangani kemungkinan kesalahan dengan memberikan informasi kepada pengguna, menghindari aplikasi menjadi tidak responsif atau crash saat ada masalah dalam pengambilan data.
+
+## PRAKTIKUM 2
+
+### Langkah 1: Buka file main.dart
+Tambahkan tiga method berisi kode seperti berikut di dalam class _FuturePageState.
+
+![Praktikum](/images/p2_langkah1.png)
+
+### Langkah 2: Tambah method count()
+Lalu tambahkan lagi method ini di bawah ketiga method sebelumnya.
+
+![Praktikum](/images/p2_langkah2.png)
+
+### Langkah 3: Panggil count()
+Lakukan comment kode sebelumnya, ubah isi kode onPressed() menjadi seperti berikut.
+
+![Praktikum](/images/p2_langkah3.png)
+
+### Langkah 4: Run
+Akhirnya, run atau tekan F5 jika aplikasi belum running. Maka Anda akan melihat seperti gambar berikut, hasil angka 6 akan tampil setelah delay 9 detik.
+
+![Praktikum](/images/p2_langkah4.gif)
+
+**Soal 4** Jelaskan maksud kode langkah 1 dan 2 tersebut!
+
+* Langkah 1: Menambahkan tiga fungsi asinkron yang mensimulasikan penundaan dan mengembalikan nilai.
+* Langkah 2: Menambahkan tombol yang memanggil fungsi count() ketika ditekan, akan berinteraksi dengan fungsi-fungsi asinkron tersebut. Kode ini bertujuan untuk menguji dan mendemonstrasikan cara kerja operasi asinkron dalam aplikasi.
+
