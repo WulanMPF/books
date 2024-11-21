@@ -230,3 +230,60 @@ Hasil:
 * **Fokus Kode:** Langkah 1: Hanya mendefinisikan metode returnError() yang menghasilkan kesalahan. Kode ini berfungsi sebagai simulasi untuk menguji penanganan error. Langkah 4: Menambahkan metode handleError() yang menangani kesalahan dari returnError(), memberikan cara untuk menangkap dan mengelola hasil dari kesalahan tersebut.
 * **Penanganan Kesalahan:** Langkah 1: Tidak ada penanganan kesalahan; hanya mendefinisikan kondisi yang akan gagal. Langkah 4: Mengimplementasikan logika penanganan kesalahan yang efektif dengan menggunakan try-catch, sehingga aplikasi bisa merespons kesalahan dengan cara yang lebih baik, seperti memperbarui UI dengan pesan kesalahan.
 * **Pengalaman Pengguna:** Langkah 1: Pengguna tidak akan mendapatkan umpan balik jika kesalahan terjadi, karena tidak ada mekanisme untuk menangani exception. Langkah 4: Dengan menangkap dan mengelola kesalahan, pengguna akan mendapatkan umpan balik yang lebih informatif, meningkatkan pengalaman pengguna dan memberikan informasi yang jelas tentang apa yang salah.
+
+## PRAKTIKUM 6
+### Langkah 1: install plugin geolocator
+Tambahkan plugin geolocator dengan mengetik perintah berikut di terminal.
+
+![Praktikum](/images/p6_langkah1.png)
+
+### Langkah 2: Tambah permission GPS
+Jika Anda menargetkan untuk platform Android, maka tambahkan baris kode berikut di file android/app/src/main/androidmanifest.xml
+
+![Praktikum](/images/p6_langkah2.png)
+
+### Langkah 3: Buat file geolocation.dart
+Tambahkan file baru ini di folder lib project Anda.
+
+![Praktikum](/images/p6_langkah3.png)
+
+### Langkah 4: Buat StatefulWidget
+Buat class LocationScreen di dalam file geolocation.dart
+
+![Praktikum](/images/p6_langkah4.png)
+
+### Langkah 5: Isi kode geolocation.dart
+
+![Praktikum](/images/p6_langkah5a.png)
+
+**Soal 11** Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+
+![Praktikum](/images/p6_langkah5b.png)
+
+### Langkah 6: Edit main.dart
+Panggil screen baru tersebut di file main Anda seperti berikut.
+
+![Praktikum](/images/p6_langkah6.png)
+
+### Langkah 7: Run
+Run project Anda di device atau emulator (bukan browser), maka akan tampil seperti berikut ini.
+
+![Praktikum](/images/p6_langkah7.jpg)
+
+### Langkah 8: Tambahkan animasi loading
+Tambahkan widget loading seperti kode berikut. Lalu hot restart, perhatikan perubahannya.
+
+![Praktikum](/images/p6_langkah8a.gif)
+
+**Soal 12** Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3)); Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+
+![Praktikum](/images/p6_langkah8b.png)
+
+![Praktikum](/images/p6_langkah8c.gif)
+
+Saat dilakukan run di browser:
+
+![Praktikum](/images/p6_langkah8d.gif)
+
+* Berhasil mendapatkan koordinat GPS saat aplikasi diberikan izin untuk mengakses lokasi karena, browser mendukung API Geolocation HTML5.
+
