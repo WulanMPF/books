@@ -369,3 +369,36 @@ Lakukan run, jika terjadi error silakan diperbaiki.
 
 ![Praktikum](/images/p8_langkah8b.gif)
 
+## PRAKTIKUM 9
+### Langkah 1: Buat file baru navigation_dialog.dart
+Buat file dart baru di folder lib project Anda.
+
+![Praktikum](/images/p9_langkah1.png)
+
+### Langkah 2: Isi kode navigation_dialog.dart
+
+![Praktikum](/images/p9_langkah2.png)
+
+### Langkah 3: Tambah method async
+
+![Praktikum](/images/p9_langkah3.png)
+
+### Langkah 4: Panggil method di ElevatedButton
+
+![Praktikum](/images/p9_langkah4.png)
+
+### Langkah 5: Edit main.dart
+Ubah properti home
+
+![Praktikum](/images/p9_langkah5.png)
+
+### Langkah 6: Run
+Coba ganti warna background dengan widget dialog tersebut. Jika terjadi error, silakan diperbaiki. Jika berhasil, akan tampil seperti gambar berikut.
+
+![Praktikum](/images/p9_langkah6a.gif)
+
+**Soal 17** Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ? Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+
+* Saat dilakukan klik pada setiap button, tema warna aplikasi ikut berubah.
+
+![Praktikum](/images/p9_langkah6b.gif)
