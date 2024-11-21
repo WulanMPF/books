@@ -43,37 +43,12 @@ class _FuturePageState extends State<FuturePage> {
       body: Center(
         child: Column(children: [
           const Spacer(),
-          // ElevatedButton(
-          //   child: const Text('GO!'),
-          //   onPressed: () {
-          //     setState(() {});
-          //     getData().then((value) {
-          //       setState(() {
-          //         result = value.body.toString().substring(0, 450);
-          //       });
-          //     }).catchError((_) {
-          //       setState(() {
-          //         result = 'An error occurred';
-          //       });
-          //     });
-          //   },
-          // ),
-
           ElevatedButton(
             child: Text('GO!'),
             onPressed: () {
-              // count();
-              // getNumber().then((value) {
-              //   setState(() {
-              //     result = value.toString();
-              //   });
-              // }).catchError((e) {
-              //   result = 'An error occurred';
-              // });
-              returnFG();
+              handleError();
             },
           ),
-
           const Spacer(),
           Text(result),
           const Spacer(),
@@ -83,13 +58,6 @@ class _FuturePageState extends State<FuturePage> {
       ),
     );
   }
-
-  // Future<Response> getData() async {
-  //   const authority = 'www.googleapis.com';
-  //   const path = '/books/v1/volumes/junbDwAAQBAJ';
-  //   Uri url = Uri.https(authority, path);
-  //   return http.get(url);
-  // }
 
   // SOAL 2
   Future<Response> getData() async {
@@ -157,5 +125,21 @@ class _FuturePageState extends State<FuturePage> {
         result = total.toString();
       });
     });
+  }
+
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something terrible happened!');
+  }
+
+  Future handleError() async {
+    try {
+      await returnError();
+    } catch (error) {
+      setState(() {
+        result = error.toString();
+      });
+    } finally {}
+    print('Complete');
   }
 }
