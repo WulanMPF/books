@@ -324,3 +324,48 @@ Tambahkan kode berikut untuk menangani ketika terjadi error. Kemudian hot restar
 ![Praktikum](/images/p7_langkah5b.gif)
 
 * Dalam segi UI tidak ada perbedaan dengan langkah sebelumnya karena meskipun terdapat modifikasi penambahan kode tidak mempengaruhi kode langkah sebelumnya. Serta pada saat aplikasi di run tidak ada error sehingga pesan handling error tidak tampil.
+
+## PRAKTIKUM 8
+### Langkah 1: Buat file baru navigation_first.dart
+Buatlah file baru ini di project lib Anda.
+
+![Praktikum](/images/p8_langkah1.png)
+
+### Langkah 2: Isi kode navigation_first.dart
+
+![Praktikum](/images/p8_langkah2a.png)
+
+**Soal 15** Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda. Silakan ganti dengan warna tema favorit Anda.
+
+![Praktikum](/images/p8_langkah2b.png)
+
+### Langkah 3: Tambah method di class _NavigationFirstState
+Tambahkan method ini.
+
+![Praktikum](/images/p8_langkah3.png)
+
+### Langkah 4: Buat file baru navigation_second.dart
+Buat file baru ini di project lib Anda. Silakan jika ingin mengelompokkan view menjadi satu folder dan sesuaikan impor yang dibutuhkan.
+
+![Praktikum](/images/p8_langkah4.png)
+
+### Langkah 5: Buat class NavigationSecond dengan StatefulWidget
+
+![Praktikum](/images/p8_langkah5.png)
+
+### Langkah 6: Edit main.dart
+Lakukan edit properti home.
+
+![Praktikum](/images/p8_langkah6.png)
+
+### Langkah 8: Run
+Lakukan run, jika terjadi error silakan diperbaiki.
+
+![Praktikum](/images/p8_langkah8a.gif)
+
+**Soal 16** Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian? Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+
+* Saat dilakukan klik pada setiap button, tema warna aplikasi ikut berubah.
+
+![Praktikum](/images/p8_langkah8b.gif)
+
