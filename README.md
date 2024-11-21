@@ -287,3 +287,40 @@ Saat dilakukan run di browser:
 
 * Berhasil mendapatkan koordinat GPS saat aplikasi diberikan izin untuk mengakses lokasi karena, browser mendukung API Geolocation HTML5.
 
+## PRAKTIKUM 7
+### Langkah 1: Modifikasi method getPosition()
+Buka file geolocation.dart kemudian ganti isi method dengan kode ini.
+
+![Praktikum](/images/p7_langkah1.png)
+
+### Langkah 2: Tambah variabel
+Tambah variabel ini di class _LocationScreenState
+
+![Praktikum](/images/p7_langkah2.png)
+
+### Langkah 3: Tambah initState()
+Tambah method ini dan set variabel position
+
+![Praktikum](/images/p7_langkah3.png)
+
+### Langkah 4: Edit method build()
+Ketik kode berikut dan sesuaikan. Kode lama bisa Anda comment atau hapus.
+
+![Praktikum](/images/p7_langkah4a.png)
+
+**Soal 13** Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+
+![Praktikum](/images/p7_langkah4b.gif)
+
+* Dalam segi UI tidak ada perbedaan dengan praktikum sebelumnya karena meskipun kodenya berbeda namun tujuan tampilannya sama. Namun dalam hal penulisan kode, penggunaan FutureBuilder membuat kode lebih terstruktur dan lebih mudah dibaca, karena memisahkan logika pengambilan data dan logika tampilan.
+
+### Langkah 5: Tambah handling error
+Tambahkan kode berikut untuk menangani ketika terjadi error. Kemudian hot restart.
+
+![Praktikum](/images/p7_langkah5a.png)
+
+**Soal 14** Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+
+![Praktikum](/images/p7_langkah5b.gif)
+
+* Dalam segi UI tidak ada perbedaan dengan langkah sebelumnya karena meskipun terdapat modifikasi penambahan kode tidak mempengaruhi kode langkah sebelumnya. Serta pada saat aplikasi di run tidak ada error sehingga pesan handling error tidak tampil.
